@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Cat-Clicker-1.0</title>
+</head>
+<body class="bg-warning">
+<div class="container">
+    <div class="display-4 text-center text-secondary">Catalie Portman</div>
+        <img id="catImg" src="cat.jpg" class="cat rounded mx-auto d-block img-fluid max-width:100% height:auto mt-2" alt="cat" width="640" height="426">
+    <div id="counter" class="display-4 text-center text-dark font-weight-bold">0</div>
+    <div class="display-4 text-center text-secondary">Chairwoman Miao</div>
+        <img id="catImg2" id="catImg" src="cat2.jpg" class="cat rounded mx-auto d-block img-fluid max-width:100% height:auto mt-2" alt="cat2" width="640px" height="496px">
+    <div id="counter2" class="display-4 text-center text-dark font-weight-bold">0</div>
+</div>
+</div>
+<script>
+
+function addCountCatImg(){
+    const catImg = document.getElementById('catImg');
+    let counter = document.getElementById('counter');
+    counter.innerText++;   
+}
+
+function addCountCatImg2(){
+    const catImg2 = document.getElementById('catImg2');
+    let counter2 = document.getElementById('counter2');
+    counter2.innerText++;
+}
+
+catImg.addEventListener('click', addCountCatImg);
+catImg2.addEventListener('click', addCountCatImg2);
+
+</script>
+</body>
+</html>

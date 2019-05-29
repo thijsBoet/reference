@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Cat-Clicker-1.0</title>
+</head>
+<body class="bg-warning">
+<div class="container">
+    <div class="display-4 text-center text-secondary">Catalie Portman</div>
+    <div id="counter" class="display-4 text-center text-dark font-weight-bold">0</div>
+    <img id="catImg" src="cat.jpg" class="cat rounded mx-auto d-block img-fluid mt-2" alt="cat" width="640" height="426">
+    
+    <div class="display-4 text-center text-secondary mt-3">Chairwoman Miao</div>
+    <div id="counter2" class="display-4 text-center text-dark font-weight-bold">0</div>
+    <img id="catImg2" src="cat2.jpg" class="cat rounded mx-auto d-block img-fluid mt-2" alt="cat2" width="640px" height="496px">
+    
+    <div class="display-4 text-center text-secondary mt-3">Margaret Scratcher</div>
+    <div id="counter3" class="display-4 text-center text-dark font-weight-bold">0</div>
+    <img id="catImg3" src="cat3.jpg" class="cat rounded mx-auto d-block img-fluid mt-2" alt="cat3" width="640px" height="496px">
+    
+    <div class="display-4 text-center text-secondary mt-3">Bubble-O-Seven</div>
+    <div id="counter4" class="display-4 text-center text-dark font-weight-bold">0</div>
+    <img id="catImg4" src="cat4.jpg" class="cat rounded mx-auto d-block img-fluid mt-2" alt="cat4" width="640px" height="496px">
+    
+    <div class="display-4 text-center text-secondary mt-3">Luke & Leia Skywhiskers</div>
+    <div id="counter5" class="display-4 text-center text-dark font-weight-bold">0</div>
+    <img id="catImg5" src="cat5.jpg" class="cat rounded mx-auto d-block img-fluid  my-2" alt="cat5" width="640px" height="496px">
+    
+</div>
+</div>
+<script>
+
+function addCountCatImg(){
+    const catImg = this;
+    let counter = document.getElementById('counter');
+    counter.innerText++;   
+}
+
+function addCountCatImg2(){
+    const catImg2 = this;
+    let counter2 = document.getElementById('counter2');
+    counter2.innerText++;
+}
+
+function addCountCatImg3(){
+    const catImg3 = this;
+    let counter3 = document.getElementById('counter3');
+    counter3.innerText++;
+}
+
+function addCountCatImg4(){
+    const catImg4 = this;
+    let counter4 = document.getElementById('counter4');
+    counter4.innerText++;
+}
+
+function addCountCatImg5(){
+    const catImg5 = this;
+    let counter5 = document.getElementById('counter5');
+    counter5.innerText++;
+}
+
+catImg.addEventListener('click', addCountCatImg);
+catImg2.addEventListener('click', addCountCatImg2);
+catImg3.addEventListener('click', addCountCatImg3);
+catImg4.addEventListener('click', addCountCatImg4);
+catImg5.addEventListener('click', addCountCatImg5);
+
+</script>
+</body>
+</html>

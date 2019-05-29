@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Async</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    
+<script>
+
+    let arrayOfPerson = [
+        {name: 'John Doe', favoriteColor: 'Yellow'},
+        {name: 'Victor Lima', favoriteColor: 'Red'},
+        {name: 'Foo Fighters', favoriteColor: 'Black'},
+        {name: 'Bar Maiden', favoriteColor: 'White'},
+    ];
+
+    const promiseToGetWebData = new Promise((resolve, reject) => {   
+            let success = true;
+            if(success){
+                resolve(...arrayOfPerson);
+            } else {
+                reject("error");
+            }
+    });
+
+
+    // promiseToGetWebData.then((dataFromWebServer) => {
+    //     console.log('Promise resolved', ...dataFromWebServer);
+    // }).catch((error) => {
+    //     console.log('Promise rejected', error)
+    // });
+
+    // ********** CLEANER ES6 way for .then().catch() *************
+    async function first(){
+        try{
+            let promiseReturn = await promiseToGetWebData;
+            console.log(promiseReturn);
+        } catch(error){
+            console.log(error)
+        }    
+    }
+
+    first();
+
+</script>
+</body>
+</html>

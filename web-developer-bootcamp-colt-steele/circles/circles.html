@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Circles</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circles.css">
+
+
+    <script type="text/javascript" src="libs/paper.js/paper-full.min.js"></script>
+    <script type="text/javascript" src="circles.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">        
+        for (var x=0; x<2000; x+=100){
+            for (var y=0; y<2000; y+=100){
+                new Path.Circle(new Point(x, y), 10).fillColor = 'yellow';
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas" resize></canvas>
+</body>
+</html>

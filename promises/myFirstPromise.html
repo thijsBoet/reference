@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>myFirstPromise</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+<script type='text/javascript'>
+const myFirstPromise = new Promise((resolve, reject) => {
+    let concluded = true;
+    if(concluded){
+        resolve('Hey! congrats, your promise was resolved ');
+    } else {
+        reject('Reject some data');
+    }
+});
+
+myFirstPromise.then((dataFromResolve) => {
+    console.log(dataFromResolve);
+}).catch( (dataFromResolve) => {
+    console.log('Promise rejected!');
+});
+
+myFirstPromise;
+
+</script>
+</html>

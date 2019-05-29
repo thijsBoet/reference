@@ -1,0 +1,19 @@
+{
+  "name": "santas-node-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "helper.js",
+  "scripts": {
+    "start": "nodemon helper.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}

@@ -1,0 +1,14 @@
+#canvas{
+  border: 3px solid grey;
+  /*align center*/
+  display: block;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.mainHeading {
+  font-family: Raleway;
+  display: block;
+  text-align: center;
+}

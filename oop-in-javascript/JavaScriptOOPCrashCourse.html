@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>JavaScript OOP Crash Course</title>
+</head>
+<body>
+<script>
+  'use strict'
+  
+  // Object Literal
+  const book = {
+    title: "Heineken",
+    author: "Freddy Heineken",
+    year: 1978,
+    getSummary: function() {
+      return `${this.title} was written by ${this.author} in ${this.year}.`
+    }
+  }
+  console.log(book.getSummary());
+  console.log(Object.values(book));
+  console.log(Object.keys(book));
+
+  // Constructor ES 5
+  function Book(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+    this.getSummary = function() {
+      return `${this.title} was written by ${this.author} in ${this.year}.`
+    }
+  }
+
+  // Instantiate on Object
+  const book1 = new Book("Moby Dick", "Herman Melville", 1851);
+  const book2 = new Book("Pride and Prejudice", "Jane Austen", 1813);
+
+  console.log(book1);
+  console.log(book2.getSummary());
+
+  // Use prototype
+  Book.prototype.getAge = function() {
+    const year = new Date().getFullYear() - this.year;
+    return `${this.title} is ${year} years old.`;
+  }
+  console.log(book1.getAge());
+
+  // Magazine Constructor
+  function Magazine(title, author, year, month){
+
+  // Inherit prototype method
+  Magazine.prototype = Object.create(Book.prototype);
+
+  // Inherit all the object attributes from Book
+    Book.call(this, title, author, year);
+
+    this.month = month;
+  }
+
+  const mag1 = new Magazine("Wired", "Conde Nast", 2018, "Jan")
+
+  console.log(mag1.getSummary());
+  console.log(mag1);
+
+  // Object Of Protos
+  const bookProtos = {
+    getSummary: function(){
+      return `${this.title} was written by ${this.author} in ${this.year}.`
+    },
+    getAge: function(){
+      const year = new Date().getFullYear() - this.year;
+      return `${this.title} is ${year} years old.`;
+    }
+  }
+
+  // ES6
+  class BookES {
+    constructor(title, author, year) {
+      this.title = title;
+      this.author = author;
+      this.year = year;
+    }
+    getSummary() {
+      return `${this.title} was written by ${this.author} in ${this.year}.`
+    }
+    getAge(){
+      const year = new Date().getFullYear() - this.year;
+      return `${this.title} is ${year} years old.`;
+    } 
+    // Static methods aren't called on instances of the class. Instead, they're called on the class itself. BookES.topBookStore()
+    static topBookStore(){
+      return "Barned & Nobles"
+    }
+  }
+
+  const bookES1 = new BookES('book one', 'john doe', 2013);
+  console.log(bookES1);
+
+  console.log(BookES.topBookStore())
+
+  // Magazine subclass
+  class MagazineSub extends Book {
+    constructor(title, author, year, month){
+      super(title, author, year);
+      this.month = month
+    }
+  }
+
+  const magSub1 = new MagazineSub('Rolling Stone Magazine', 'Conse Nast', 2019, 'Feb');
+  console.log(magSub1);
+  console.log(magSub1.getSummary());
+
+</script>
+</body>
+</html>

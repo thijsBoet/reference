@@ -1,0 +1,14 @@
+.changedStyle {
+    color: blue;
+    border: 10px solid red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 72px;
+}
+.border{
+    border: 2px solid purple;
+    margin: 5px;
+}
+.purpleBg{
+    background-color: purple;
+}

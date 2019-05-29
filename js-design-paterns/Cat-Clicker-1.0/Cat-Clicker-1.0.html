@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Cat-Clicker-1.0</title>
+</head>
+<body>
+<div class="container">
+    <div class="display-4 text-center text-mute">Catalie Portman</div>
+        <img id="catImg" src="cat.jpg" class="cat rounded mx-auto d-block img-fluid max-width:100% height:auto mt-2" alt="cat" width="640px" height="426px">
+    <div id="counter" class="display-4 text-center text-mute">0</div>
+<script>
+
+function addCountCatImg(){
+    const catImg = document.getElementById('catImg');
+    let counter = document.getElementById('counter');
+    counter.innerText++;
+}
+
+catImg.addEventListener('click', addCountCatImg);
+
+</script>
+</body>
+</html>
